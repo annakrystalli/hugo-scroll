@@ -91,7 +91,7 @@ body {
   height: 100%;
   max-height: 100%;
   /*font-family: 'Droid Serif', serif;*/
-  font-family: "Roboto Slab", serif;
+  font-family: "Open Sans", serif;
   font-size: 2rem;
   line-height: 1.6em;
   color: #3a4145;
@@ -129,7 +129,7 @@ h6 {
   line-height: 1;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Kaushan Script', cursive;
 }
 h3,
 h4,
@@ -180,12 +180,12 @@ a {
 }
 
 a:hover {
-  color: #86c440;
+  color: #7394B6;
 }
 
 a.btn {
   text-decoration: none;
-  background-color: #9fd067;
+  background-color: hsl(24, 99%, 36%);
   border-radius: 6px;
   -webkit-border-radius: 6px;
   color: white;
@@ -199,12 +199,12 @@ a.btn {
   margin-top: 2rem;
   cursor: pointer;
   font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-weight: lighter;
+  /*text-transform: uppercase;*/
+  font-weight: normal;
 }
 
 a.btn:hover {
-  background: #86c440;
+  background: #7394B6;
 }
 
 #header-arrow {
@@ -510,7 +510,7 @@ ul li {
   font-size: 2.5rem;
   line-height: 1.5em;
   font-weight: 400;
-  font-family: "Roboto Slab", serif;
+  font-family: "Ubuntu", serif;
   letter-spacing: 0;
 }
 
@@ -521,7 +521,7 @@ ul li {
   position: relative;
 }
 .post-holder.odd {
-  background: #b80135;
+  background: hsl(24, 99%, 36%) ;
   color: white;
 }
 
@@ -549,7 +549,7 @@ ul li {
   left: 2%;
   z-index: 99999;
   font-family: "Open Sans Condensed", sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-size: 1.5rem;
   line-height: 130%;
   font-weight: bold;
@@ -563,10 +563,10 @@ a.fn-item {
   color: white;
 }
 a.fn-item:hover {
-  color: #9fd067;
+  color: #7394B6;
 }
 a.fn-item.active {
-  color: #86c440;
+  color: #7394B6;
   opacity: 1;
 }
 
@@ -953,7 +953,7 @@ a.fn-item.active {
   }
 
   .blog-title {
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: -1px;
   }
 
@@ -1105,6 +1105,18 @@ a.fn-item.active {
   }
 }
 
+.img-round {
+  border-radius: 50%;
+  /*border-width: 5px;
+  border-color: hsl(24, 99%, 36%);
+  border-style: solid;
+  margin: 5px;*/
+}
+
+.img-float-left {
+  float: left;
+  margin: 25px;
+}
 /* ==========================================================================
       End of file. Media queries should be the last thing here. Do not add stuff
       below this point, or it will probably fuck everything up.
