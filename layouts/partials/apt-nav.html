@@ -1,0 +1,17 @@
+
+        <!-- sidebar menu start-->
+        <ul class="navbar-ul">
+            <li class="navbar-li"><a href="{{ "/" | relURL }}">Home</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Apartments</a>
+              <div class="dropdown-content">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.apartments }}
+                      <a href="{{.URL}}" >
+                          <span>{{ .Name }}</span>
+                      </a>
+                    {{end}}
+              </div>
+            </li>
+        </ul>
+        <!-- sidebar menu end-->
