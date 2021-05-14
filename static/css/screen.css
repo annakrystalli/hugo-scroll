@@ -148,7 +148,7 @@ h6 {
   line-height: 120%;
   margin-top: 0;
   font-family: var(--main-font);
-  margin-bottom: 0%;
+  margin-bottom: 1.5%;
 }
 
 h1 {
@@ -659,6 +659,13 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.price-box {
+  border: var(--dark-grey);
+  border-style: solid;
+  padding: 1em;
+  border-radius: 10px;
 }
 
 .post-after {
