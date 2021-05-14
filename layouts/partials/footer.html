@@ -2,8 +2,22 @@
   <div class="inner">
     {{ with .Site.Params.copyright }}
       <section class="copyright">{{ . | markdownify }}</section>{{ end }}
-
-
+    {{ with .Site.Params.email }}
+      <section>
+      <icon class="fa fa-envelope"/>&nbsp;
+        <a href="mailto:{{ . }}">
+        {{ . | markdownify }}
+        </a>
+      {{ end }} 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {{ with .Site.Params.phone }}
+      
+      <icon class="fa fa-phone"/>&nbsp;
+        <a href="tel:{{ . }}">
+        {{ . | markdownify }}
+        </a>
+      </section>{{ end }}
+      
     <section>{{ echoParam .Site.Params "hidebyline" }}</section>
     {{ if ne .Site.Params.hidedesignbyline true }}
       <section>
