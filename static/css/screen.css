@@ -85,6 +85,7 @@
   --dark-blue: #7394B6;
   --ceramic: hsl(20, 79%, 34%);
   --light-grey: #f2efe8;
+  --medium-antique-white: #d8d2be;
   --dark-grey: #3a4145;
   --main-font: "Roboto", sans-serif;
 }
@@ -261,8 +262,8 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #efefef;
-  margin: 3.2em 0;
+  border-top: 1px solid var(--medium-antique-white) ;
+  margin: 2em 0;
   padding: 0;
 }
 
@@ -608,15 +609,24 @@ a.fn-item.active {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-grey);
 }
 
 .navbar-li {
-  color: white;
+  color: var(--light-grey);
   text-align: left;
   padding: 5px 5px;
   text-decoration: none;
   display: inline-block;
+}
+
+.navbar-li li:last-child {
+    float: right; 
+}
+
+.prepend-logo::before{
+  content: url('/images/sun-flower-small.png');
+  padding-right: 10px;
 }
 
 .navbar-li a, .dropbtn {
@@ -628,11 +638,14 @@ a.fn-item.active {
 }
 
 .navbar-li a:hover, .dropdown:hover .dropbtn {
-  color: var(--dark-grey);
+  color: var(--ligth-blue);
 }
 
 li.dropdown {
   display: inline-block;
+  float: right; 
+  padding-top: 2%;
+  padding-right: 2%;
 }
 
 .dropdown-content {
@@ -663,11 +676,16 @@ li.dropdown {
 
 .price-box {
   border: var(--dark-grey);
+  background-color: var(--medium-antique-white);
   border-style: solid;
   padding: 1em;
   border-radius: 10px;
+  margin-bottom: 2em;
 }
 
+.basic-nav {
+ margin-bottom: 3em;
+}
 .post-after {
   position: absolute;
   bottom: -40px;
@@ -1202,6 +1220,11 @@ li.dropdown {
     /*margin-top: 0.8rem;*/
     font-size: 1.1rem;
   }
+
+  .prepend-logo::before{
+    content: '';
+}
+
 }
 
 .img-round {
@@ -1228,7 +1251,7 @@ li.dropdown {
 }
 
 .apt-round {
-  border-radius: 9px;
+  border-radius: 2px;
 }
 /* ==========================================================================
       End of file. Media queries should be the last thing here. Do not add stuff

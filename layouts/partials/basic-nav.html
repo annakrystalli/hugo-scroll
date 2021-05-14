@@ -1,0 +1,15 @@
+
+        <!-- sidebar menu start-->
+        <ul class="basic-nav navbar-ul apt-round">
+            <li class="navbar-li prepend-logo"><h1 class="navbar-li"> {{ .Title }} </h1></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn"><h1 class="navbar-li"> <i class="fa fa-bars"></i></h1></a>
+              <div class="dropdown-content">
+                    <a href="{{ "/" | relURL }}"> Home </a>
+                    <a href="{{ "/#apartments" | relURL }}"> Apartments </a>
+                    <a href="{{ "/policies/" | relURL }}"> Policies </a>
+              </div>
+            </li>
+        </ul>
+        <!-- sidebar menu end-->
+        

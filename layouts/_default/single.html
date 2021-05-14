@@ -2,7 +2,11 @@
   <main class="content page-template page-{{ .Slug }}" role="main">
     <main class ="parallax"></div>
     <article class="post post-apt page">
+    {{ if isset .Params "price_low"  }}
           {{ partial "apt-nav" .}}
+          {{ else }}
+          {{ partial "basic-nav" .}}
+          {{end}}
       <section class="post-content">
         {{ .Content }}
       </section>

@@ -1,18 +1,28 @@
 
         <!-- sidebar menu start-->
         <ul class="navbar-ul apt-round">
-            <li class="navbar-li"><h2 class="navbar-li"><a href="{{ "/" | relURL }}"><img src="/images/sun-flower.png" width="55px"/> </a></h2></li>
-            <li class="navbar-li"><h1 class="navbar-li"> {{ .Title }} </h1></li>
+            <li class="navbar-li prepend-logo"><h1 class="navbar-li"> {{ .Title }} </h1></li>
             <li class="dropdown">
-              <a href="javascript:void(0)" class="dropbtn">All apartments</a>
+              <a href="javascript:void(0)" class="dropbtn"><h1 class="navbar-li"> <i class="fa fa-bars"></i></h1></a>
               <div class="dropdown-content">
+                    <a href="{{ "/" | relURL }}"> Home </a>
                     {{ $currentPage := . }}
                     {{ range .Site.Menus.apartments }}
                       <a href="{{.URL}}" >
                           <span>{{ .Name }}</span>
                       </a>
                     {{end}}
+                    <a href="{{ "/policies/" | relURL }}"> Policies </a>
               </div>
             </li>
         </ul>
         <!-- sidebar menu end-->
+        {{ with .Params.header_image }}<img class="img-apt-main apt-round" src={{ . }} width="100%" />{{ end }}
+        <p></p>
+        <div class="price-box">
+        <h2>Pricing</h2>
+        {{ with .Params.price_low }}<h6> Low season: {{ . }} </h6>{{ end }}
+        {{ with .Params.price_high }}<h6> High season: {{ . }} </h6>{{ end }}
+        <p><small>Rates vary according to number of guests. Contact us for exact quote</small></p>
+        </div>
+        
