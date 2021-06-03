@@ -549,6 +549,7 @@ ul li {
   height: 70%;
   word-break: break-word;
   hyphens: auto;
+  justify-content: center;
 }
 
 .post-apt {
@@ -590,6 +591,12 @@ a.fn-item.active {
   z-index: 9;
 }
 
+/* ==========================================================================
+      Single page Customisation
+      ========================================================================== */
+
+/* Paralax background. */
+
 .parallax {
   /* The image used */
   background-image: url("/images/kini-sea.jpeg");
@@ -604,26 +611,31 @@ a.fn-item.active {
   background-size: cover;
 }
 
+/* Navbar. */
 .navbar-ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: var(--dark-grey);
+  /* background-color: var(--dark-grey);*/
+  background-image: url("/images/black-brush-lines-grey.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: right;
 }
 
 .navbar-li {
   color: var(--light-grey);
-  text-align: left;
+  text-align: center;
   padding: 5px 5px;
   text-decoration: none;
   display: inline-block;
 }
-
+/*
 .navbar-li li:last-child {
     float: right; 
 }
-
+*/
 .prepend-logo::before{
   content: url('/images/sun-flower-small.png');
   padding-right: 10px;
@@ -632,8 +644,8 @@ a.fn-item.active {
 .navbar-li a, .dropbtn {
   display: inline-block;
   color: white;
-  text-align: right;
-  /*padding: 14px 5px;*/
+  text-align: center;
+  padding: auto;
   text-decoration: none;
 }
 
@@ -643,14 +655,17 @@ a.fn-item.active {
 
 li.dropdown {
   display: inline-block;
-  float: right; 
-  padding-top: 2%;
+  padding: auto;
+  text-align: center;
+  /*padding-top: 2%;*/
   padding-right: 2%;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  left:auto;
+  right:10px;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -663,11 +678,13 @@ li.dropdown {
   text-decoration: none;
   display: block;
   text-align: left;
+  font-weight: 400;
 }
 
 .dropdown-content a:hover {
   background-color: white;
   color: var(--dark-blue);
+  font-weight: 600;
 }
 
 .dropdown:hover .dropdown-content {
@@ -678,9 +695,9 @@ li.dropdown {
   border: var(--dark-grey);
   background-color: var(--medium-antique-white);
   border-style: solid;
-  padding: 1em;
+  padding: 1em 1.5em  0.5em 1.5em;
   border-radius: 10px;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 .basic-nav {
@@ -1033,6 +1050,40 @@ li.dropdown {
 }
 
 /* ==========================================================================
+      IMAGES
+      ========================================================================== */
+
+
+.img-round {
+  border-radius: 50%;
+  border-width: 5%;
+  border-color: var(--dark-grey);
+  border-style: solid;
+  margin: 25px;
+  /*padding: 20px;*/
+}
+
+.img-rounded {
+  border-radius: 5%;
+  /*border-width: 5%;
+  border-color: hsl(24, 99%, 36%);
+  border-style: solid;*
+  margin: 25px;
+  padding: 20px; */
+}
+
+.img-float-left {
+  float: left;
+  margin: 25px;
+}
+
+.apt-round {
+  border-radius: 2px;
+}
+
+
+
+/* ==========================================================================
       9. Media Queries - Smaller than 1130px
       ========================================================================== */
 
@@ -1109,11 +1160,13 @@ li.dropdown {
   }
 }
 
+
+
 /* ==========================================================================
-      10. Media Queries - Smaller than 500px
+      10. Media Queries - Smaller than 580px
       ========================================================================== */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 580px) {
   .fixed-nav {
     display: none;
   }
@@ -1133,9 +1186,11 @@ li.dropdown {
 
   .post {
     width: auto;
-    margin-left: 16px;
-    margin-right: 16px;
-    font-size: 0.8em;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    font-size: 0.9em;
     line-height: 1.6em;
   }
 
@@ -1159,19 +1214,148 @@ li.dropdown {
     font-size: 2.2rem;
   }
 
-  h1,
+  h1 {
+    font-size: 2.8rem;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+  }
   h2 {
-    font-size: 3rem;
+    font-size: 2.6rem;
     line-height: 1.1em;
     letter-spacing: -1px;
   }
 
   h3 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 
-  h4 {
-    font-size: 2.3rem;
+  h4 h5, h6 {
+    font-size: 2.1rem;
+  }
+
+  .post-template .post {
+    padding-bottom: 0;
+  }
+
+  .post-template .post-header {
+    padding: 30px 0;
+  }
+
+  .post-meta {
+    font-size: 1.3rem;
+  }
+
+  .post-footer {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .post-footer .author {
+    margin: 0 0 2rem 0;
+    padding: 0 0 1.6rem 0;
+    border-bottom: #ebf2f6 1px dashed;
+  }
+
+  .post-footer .share {
+    position: static;
+    width: auto;
+  }
+
+  .post-footer .share a {
+    margin: 1.4rem 0.8rem 0 0.8rem;
+  }
+
+  .older-posts,
+  .newer-posts {
+    position: static;
+    margin: 10px 0;
+  }
+
+  .page-number {
+    display: block;
+  }
+
+  .site-footer {
+    /*margin-top: 0.8rem;*/
+    font-size: 1.1rem;
+  }
+
+  .prepend-logo::before{
+    content: '';
+}
+
+}
+/* ==========================================================================
+      10. Media Queries - Smaller than 470px
+      ========================================================================== */
+
+@media only screen and (max-width: 470px) {
+  .fixed-nav {
+    display: none;
+  }
+  .post-holder {
+    padding-top: 20px;
+  }
+  #blog-logo img {
+    max-height: 80px;
+  }
+
+  .inner,
+  .pagination {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .post {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.7em;
+    line-height: 1.6em;
+  }
+
+  #site-head {
+    padding: 10% 0;
+    height: 65%;
+  }
+
+  #header-arrow {
+    display: none;
+  }
+  a.btn {
+    margin-top: 10px;
+  }
+
+  .blog-title {
+    font-size: 3rem;
+  }
+
+  .blog-description {
+    font-size: 2.2rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4, h5, h6 {
+    font-size: 1.4rem;
   }
 
   .post-template .post {
@@ -1227,32 +1411,6 @@ li.dropdown {
 
 }
 
-.img-round {
-  border-radius: 50%;
-  border-width: 5%;
-  border-color: var(--dark-grey);
-  border-style: solid;
-  margin: 25px;
-  /*padding: 20px;*/
-}
-
-.img-rounded {
-  border-radius: 5%;
-  /*border-width: 5%;
-  border-color: hsl(24, 99%, 36%);
-  border-style: solid;*
-  margin: 25px;
-  padding: 20px; */
-}
-
-.img-float-left {
-  float: left;
-  margin: 25px;
-}
-
-.apt-round {
-  border-radius: 2px;
-}
 /* ==========================================================================
       End of file. Media queries should be the last thing here. Do not add stuff
       below this point, or it will probably fuck everything up.

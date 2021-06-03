@@ -3,9 +3,9 @@
         <ul class="navbar-ul apt-round">
             <li class="navbar-li prepend-logo"><h1 class="navbar-li"> {{ .Title }} </h1></li>
             <li class="dropdown">
-              <a href="javascript:void(0)" class="dropbtn"><h1 class="navbar-li"> <i class="fa fa-bars"></i></h1></a>
+              <a href="javascript:void(0)" class="dropbtn"><h2 class="navbar-li"> <i class="fa fa-bars"></i></h2></a>
               <div class="dropdown-content">
-                    <a href="{{ "/" | relURL }}"> Home </a>
+                    <a href="{{ "/" | relURL }}"><i class="fa fa-home"></i> Home </a>
                     {{ $currentPage := . }}
                     {{ range .Site.Menus.apartments }}
                       <a href="{{.URL}}" >
@@ -23,6 +23,6 @@
         <h2>Pricing</h2>
         {{ with .Params.price_low }}<h6> Low season: {{ . }} </h6>{{ end }}
         {{ with .Params.price_high }}<h6> High season: {{ . }} </h6>{{ end }}
-        <p><small>Rates vary according to number of guests. Contact us for exact quote</small></p>
+        <small>Rates vary according to number of guests. Please contact us for availability and an exact quote.</small>
         </div>
         
