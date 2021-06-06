@@ -17,7 +17,7 @@
             </li>
         </ul>
         <!-- sidebar menu end-->
-        {{ with .Params.header_image }}<img class="img-apt-main apt-round" src={{ . }} width="100%" />{{ end }}
+        {{ with resources.Get .Params.header_image }}<img class="img-apt-main apt-round" src={{ .RelPermalink }} width="100%" />{{ end }}
         <p></p>
         <div class="price-box">
         <h2>Pricing</h2>
