@@ -88,6 +88,7 @@
   --medium-antique-white: #d8d2be;
   --dark-grey: #3a4145;
   --main-font: "Roboto", sans-serif;
+  --header-font: 'Kaushan Script', cursive;
 }
 
 html {
@@ -139,7 +140,7 @@ h6 {
   line-height: 1;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: 'Kaushan Script', cursive;
+  font-family: var(--header-font);
 }
 h3,
 h4,
@@ -941,7 +942,7 @@ li.dropdown {
   position: relative;
   margin: 0rem 0 0 0;
   padding: 1rem 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--main-font);
   font-size: 1.3rem;
   line-height: 1.5em;
   color: #bbc7cc;
